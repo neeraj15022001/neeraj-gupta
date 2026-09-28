@@ -1,36 +1,3 @@
-const themeColors = {
-  cobalt: ['#214fd3', '#edf2ff'],
-  ocean: ['#08747e', '#e6f5f4'],
-  plum: ['#79447f', '#f5edf6'],
-};
-
-document.querySelectorAll('[data-theme]').forEach(button => {
-  button.addEventListener('click', () => {
-    const colors = themeColors[button.dataset.theme];
-    document.querySelector('#demo-card').style.setProperty('--demo', colors[0]);
-    document.querySelector('#demo-card').style.setProperty('--demo-soft', colors[1]);
-    document.querySelectorAll('[data-theme]').forEach(option => {
-      option.setAttribute('aria-pressed', String(option === button));
-    });
-  });
-});
-
-const demoForm = document.querySelector('#demo-form');
-const confirmation = document.querySelector('#demo-confirmation');
-demoForm.addEventListener('submit', event => {
-  event.preventDefault();
-  const data = new FormData(demoForm);
-  document.querySelector('#confirmation-detail').textContent = `${data.get('visit')} · ${data.get('time')}`;
-  demoForm.hidden = true;
-  confirmation.hidden = false;
-  document.querySelector('#demo-reset').focus();
-});
-document.querySelector('#demo-reset').addEventListener('click', () => {
-  confirmation.hidden = true;
-  demoForm.hidden = false;
-  demoForm.querySelector('input:checked').focus();
-});
-
 const projects = {
   "ai-gateway": {
     "category": "AI platforms · Senior Software Engineer",
