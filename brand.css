@@ -1,1 +1,11 @@
 .identity .brand-mark{display:block;width:43px;height:34px;flex:none;object-fit:contain}
+
+/* Match the landing page entrance on every route. */
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+main { animation: page-enter .8s ease-out backwards; }
+@media (prefers-reduced-motion: reduce) {
+  main { animation: none; }
+}
