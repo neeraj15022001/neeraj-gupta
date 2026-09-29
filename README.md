@@ -6,11 +6,11 @@ Personal portfolio: enterprise engineering, independent projects, and career exp
 
 ## Pages
 
-- `dist/index.html` — animated landing page
-- `dist/corporate/index.html` — corporate work, experience, case studies, and résumé
-- `dist/github.html` — public project showcase
-- `dist/brand.css` — shared monogram sizing and page entrance animation
-- `dist/assets/` — themed vector logos and favicons
+- `index.html` — animated landing page
+- `corporate/index.html` — corporate work, experience, case studies, and résumé
+- `github.html` — public project showcase
+- `brand.css` — shared monogram sizing and page entrance animation
+- `assets/` — themed vector logos and favicons
 
 Plain HTML, CSS, and JavaScript. No build or dependency installation required.
 
@@ -24,11 +24,10 @@ Open http://localhost:4173/. Links are relative so the site also works under Git
 
 ## Publish to GitHub Pages
 
-`main` holds source; `gh-pages` holds the contents of `dist/`. GitHub Pages publishes from `gh-pages` at `/`.
+`main` holds the complete site at repository root. GitHub Pages publishes from `main:/`.
 
 ```sh
 git push github main
-git subtree push --prefix dist github gh-pages
 ```
 
 The existing private Sites deployment is managed separately through `.openai/hosting.json`. Its access policy is unchanged by GitHub publication.
