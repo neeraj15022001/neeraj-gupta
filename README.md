@@ -11,6 +11,8 @@ Personal portfolio: enterprise engineering, independent projects, and career exp
 - `github.html` — public project showcase
 - `youtube.html` — latest videos from OS Tips n Tricks
 - `blog.html` — latest posts from Neeraj’s Dev.to profile
+- `connect.html` — WhatsApp and email message composers with prefilled app handoff
+- `connect-links.mjs` — validated, tested WhatsApp and `mailto:` URL builders
 - `brand.css` — shared monogram sizing and page entrance animation
 - `assets/` — themed vector logos and favicons
 
@@ -22,7 +24,7 @@ Plain HTML, CSS, and JavaScript. No build or dependency installation required.
 python3 -m http.server 4173
 ```
 
-Open http://localhost:4173/. Links are relative so the site also works under GitHub Pages' repository path.
+Open http://localhost:4173/. Links are relative so the site also works under GitHub Pages' repository path. Run `node --test tests/connect-links.test.mjs` to verify contact URL construction.
 
 ## Publish to GitHub Pages
 
@@ -40,4 +42,4 @@ Whenever a coding agent changes this project or reads its memory bank, refresh `
 
 ## Content
 
-Resume-based facts belong to Neeraj Gupta. Project visuals are illustrative concepts, not employer screenshots. Content uses the September 2026 resume and work notes; the resume's headline metrics take precedence. No analytics, contact-form backend, or visitor storage. Manrope loads from Google Fonts with a system fallback. Motion respects reduced-motion preferences.
+Resume-based facts belong to Neeraj Gupta. Project visuals are illustrative concepts, not employer screenshots. Content uses the September 2026 resume and work notes; the resume's headline metrics take precedence. Contact drafts are not stored; the page hands messages to WhatsApp or the visitor’s email app. No analytics, contact-form backend, or visitor storage. Manrope loads from Google Fonts with a system fallback. Motion respects reduced-motion preferences.
