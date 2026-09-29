@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ef">
+  <meta name="description" content="Contact Neeraj Gupta by WhatsApp or email.">
+  <title>Connect with Neeraj Gupta</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon-connect.svg">
+  <link rel="stylesheet" href="./brand.css">
+  <link rel="stylesheet" href="./connect.css">
+  <script type="module" src="./connect.js"></script>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <a class="skip" href="#main">Skip to content</a>
+  <main id="main" class="connect-shell">
+    <header class="site-header">
+      <a class="identity" href="./" aria-label="Neeraj Gupta, portfolio home">
+        <img class="brand-mark" src="./assets/monogram-connect.svg" width="43" height="34" alt="">
+        <span>Neeraj Gupta<small>Senior Software Engineer</small></span>
+      </a>
+      <a class="back" href="./">← Back to portfolio</a>
+    </header>
+    <section class="connect-hero" aria-labelledby="connect-title">
+      <p class="eyebrow">LET’S CONNECT</p>
+      <h1 id="connect-title">Have something in mind?</h1>
+      <p>Choose a channel. Write a note. It will open in your app, ready to send.</p>
+    </section>
+    <section class="contact-card" aria-label="Contact options">
+      <div class="contact-tabs" role="tablist" aria-label="Choose how to contact me">
+        <button id="tab-whatsapp" type="button" role="tab" aria-selected="true"
+          aria-controls="panel-whatsapp" data-tab="whatsapp" tabindex="0">WhatsApp</button>
+        <button id="tab-email" type="button" role="tab" aria-selected="false"
+          aria-controls="panel-email" data-tab="email" tabindex="-1">Email</button>
+      </div>
+      <section id="panel-whatsapp" role="tabpanel" aria-labelledby="tab-whatsapp">
+        <div class="chat-window">
+          <header class="chat-header">
+            <img src="./assets/monogram-connect.svg" width="40" height="32" alt="">
+            <div><strong>Neeraj Gupta</strong><span>WhatsApp message</span></div>
+          </header>
+          <div class="chat-history" aria-live="polite">
+            <p class="chat-bubble">Hi! Leave me a message here.</p>
+            <p class="chat-note">WhatsApp opens with your message ready to send.</p>
+          </div>
+          <form id="whatsapp-form" class="message-form">
+            <label class="visually-hidden" for="whatsapp-message">Your WhatsApp message</label>
+            <textarea id="whatsapp-message" name="message" rows="2" required
+              placeholder="Write a message…"></textarea>
+            <button type="submit">Continue in WhatsApp <span aria-hidden="true">↗</span></button>
+          </form>
+        </div>
+      </section>
+      <section id="panel-email" role="tabpanel" aria-labelledby="tab-email" hidden>
+        <div class="email-window">
+          <div class="email-title"><span class="gmail-mark" aria-hidden="true">M</span>New message</div>
+          <form id="email-form" class="email-form">
+            <label for="email-to">To</label>
+            <input id="email-to" value="gneeraj32595@gmail.com" readonly>
+            <label for="email-subject">Subject</label>
+            <input id="email-subject" name="subject" autocomplete="off">
+            <label for="email-message">Message</label>
+            <textarea id="email-message" name="message" rows="7" required></textarea>
+            <button type="submit">Open in email app <span aria-hidden="true">↗</span></button>
+          </form>
+        </div>
+      </section>
+    </section>
+    <footer><span>Based in Pune, India</span><span>Choose the channel that works for you.</span></footer>
+  </main>
+</body>
+</html>
