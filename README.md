@@ -9,6 +9,7 @@ Personal portfolio: enterprise engineering, independent projects, and career exp
 - `index.html` — animated landing page
 - `corporate/index.html` — corporate work, experience, case studies, and résumé
 - `github.html` — public project showcase
+- `youtube.html` — latest videos from OS Tips n Tricks
 - `brand.css` — shared monogram sizing and page entrance animation
 - `assets/` — themed vector logos and favicons
 
