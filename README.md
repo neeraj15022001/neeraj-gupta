@@ -10,6 +10,7 @@ Personal portfolio: enterprise engineering, independent projects, and career exp
 - `corporate/index.html` — corporate work, experience, case studies, and résumé
 - `github.html` — public project showcase
 - `youtube.html` — latest videos from OS Tips n Tricks
+- `blog.html` — latest posts from Neeraj’s Dev.to profile
 - `brand.css` — shared monogram sizing and page entrance animation
 - `assets/` — themed vector logos and favicons
 
@@ -18,7 +19,7 @@ Plain HTML, CSS, and JavaScript. No build or dependency installation required.
 ## Local preview
 
 ```sh
-python3 -m http.server 4173 --directory dist
+python3 -m http.server 4173
 ```
 
 Open http://localhost:4173/. Links are relative so the site also works under GitHub Pages' repository path.
@@ -35,7 +36,7 @@ The existing private Sites deployment is managed separately through `.openai/hos
 
 ## Showcase refresh rule
 
-Whenever a coding agent changes this project or reads its memory bank, refresh both `github.html` and `youtube.html` before finishing. YouTube: inspect `https://www.youtube.com/@ostipsntricks3547`, fetch newest 3–6 channel videos, and list them with exact titles, upload dates, thumbnail URLs, and watch links. GitHub: fetch the account’s public repositories, sort standalone projects by latest push, exclude forks and profile/portfolio repositories, then show the newest 3–6 projects with verified repo names, languages, push dates, and accurate descriptions. Update landing-page links only when destinations change. Never invent metadata; record source and refresh date in memory bank.
+Whenever a coding agent changes this project or reads its memory bank, refresh `github.html`, `youtube.html`, and `blog.html` before finishing. YouTube: inspect `https://www.youtube.com/@ostipsntricks3547`, fetch newest 3–6 channel videos, and list them with exact titles, upload dates, thumbnail URLs, and watch links. GitHub: fetch the account’s public repositories, sort standalone projects by latest push, exclude forks and profile/portfolio repositories, then show the newest 3–6 projects with verified repo names, languages, push dates, and accurate descriptions. Dev.to: inspect `https://dev.to/neeraj15022001`, fetch up to the six newest authored articles from `https://dev.to/api/articles?username=neeraj15022001&per_page=6`, and list exact titles, publish dates, cover images when available, canonical article URLs, and verified tags. Show fewer only when fewer exist. Never invent metadata; record source and refresh date in memory bank.
 
 ## Content
 
