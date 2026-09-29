@@ -11,7 +11,7 @@ Personal portfolio: enterprise engineering, independent projects, and career exp
 - `github.html` — public project showcase
 - `youtube.html` — latest videos from OS Tips n Tricks
 - `blog.html` — latest posts from Neeraj’s Dev.to profile
-- `connect.html` — WhatsApp and email message composers with prefilled app handoff
+- `connect.html` — WhatsApp/email message composers with prefilled app handoff and LinkedIn profile link
 - `connect-links.mjs` — validated, tested WhatsApp and `mailto:` URL builders
 - `brand.css` — shared monogram, page entrance animation, and 1240px content shell
 - `assets/` — themed vector logos and favicons
