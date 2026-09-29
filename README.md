@@ -13,7 +13,7 @@ Personal portfolio: enterprise engineering, independent projects, and career exp
 - `blog.html` — latest posts from Neeraj’s Dev.to profile
 - `connect.html` — WhatsApp and email message composers with prefilled app handoff
 - `connect-links.mjs` — validated, tested WhatsApp and `mailto:` URL builders
-- `brand.css` — shared monogram sizing and page entrance animation
+- `brand.css` — shared monogram, page entrance animation, and 1240px content shell
 - `assets/` — themed vector logos and favicons
 
 Plain HTML, CSS, and JavaScript. No build or dependency installation required.
