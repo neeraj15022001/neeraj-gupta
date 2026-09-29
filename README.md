@@ -1,24 +1,38 @@
-# Neeraj Gupta portfolio
+# Neeraj Gupta
 
-A responsive, static portfolio with ten case studies, a full-width introduction with three engineering outcomes, career history, and contact links.
+Personal portfolio: enterprise engineering, independent projects, and career experience.
 
-## Files
+**Live site:** https://neeraj15022001.github.io/neeraj-gupta/
 
-- `dist/index.html` — page content and metadata
-- `dist/styles.css` — visual system and responsive layouts
-- `dist/app.js` — case study content and dialog interactions
-- `.openai/hosting.json` — Sites project identity and static output configuration
+## Pages
 
-Serve `dist/` with any static web server. No dependency installation or build is required.
+- `dist/index.html` — animated landing page
+- `dist/corporate/index.html` — corporate work, experience, case studies, and résumé
+- `dist/github.html` — public project showcase
+- `dist/brand.css` — shared monogram sizing and page entrance animation
+- `dist/assets/` — themed vector logos and favicons
 
-## Content notes
+Plain HTML, CSS, and JavaScript. No build or dependency installation required.
 
-Resume-based facts belong to Neeraj Gupta. Project diagrams are illustrative concepts, not employer screenshots. There is no analytics, contact-form backend, or visitor data storage.
+## Local preview
 
-Google Fonts supplies Manrope. A system sans-serif fallback remains available if the font cannot load.
+```sh
+python3 -m http.server 4173 --directory dist
+```
 
-The Sites deployment starts private. The resume link opens the supplied September 2026 PDF, hosted with the site's existing access controls.
+Open http://localhost:4173/. Links are relative so the site also works under GitHub Pages' repository path.
 
-## September 2026 content update
+## Publish to GitHub Pages
 
-Content uses `Raw_Work_Dump.md` and `Neeraj_Gupta_Resume_SSWE.pdf` supplied by Neeraj. The newer resume supplies headline metrics (8M+ monthly AI Gateway requests; Lighthouse 95–100). Work-dump detail clarifies personal versus team ownership. The migration timeline refers to development completion. Senior Software Engineer dates end in September 2026; the page does not claim current employment. Source documents remain unchanged.
+`main` holds source; `gh-pages` holds the contents of `dist/`. GitHub Pages publishes from `gh-pages` at `/`.
+
+```sh
+git push github main
+git subtree push --prefix dist github gh-pages
+```
+
+The existing private Sites deployment is managed separately through `.openai/hosting.json`. Its access policy is unchanged by GitHub publication.
+
+## Content
+
+Resume-based facts belong to Neeraj Gupta. Project visuals are illustrative concepts, not employer screenshots. Content uses the September 2026 resume and work notes; the resume's headline metrics take precedence. No analytics, contact-form backend, or visitor storage. Manrope loads from Google Fonts with a system fallback. Motion respects reduced-motion preferences.
