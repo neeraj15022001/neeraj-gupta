@@ -222,20 +222,24 @@ document.querySelectorAll('[data-project]').forEach(button => {
     document.body.style.overflow = 'hidden';
   });
 });
-document.querySelector('.dialog-close').addEventListener('click', () => projectDialog.close());
-projectDialog.addEventListener('click', event => {
+document.querySelector('.dialog-close')?.addEventListener('click', () => projectDialog.close());
+projectDialog?.addEventListener('click', event => {
   if (event.target !== projectDialog) return;
   const rect = projectDialog.getBoundingClientRect();
   if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) projectDialog.close();
 });
-projectDialog.addEventListener('close', () => {
+projectDialog?.addEventListener('close', () => {
   document.body.style.overflow = '';
   projectTrigger?.focus();
 });
 
-const githubShowcase = document.createElement('section');
-githubShowcase.className = 'github-section wrap';
-githubShowcase.id = 'github';
-githubShowcase.setAttribute('aria-labelledby', 'github-title');
-githubShowcase.innerHTML = `<div class="github-heading"><div><p class="section-context">Public work on GitHub</p><h2 id="github-title">Built in public.</h2></div><a class="github-profile-link" href="https://github.com/neeraj15022001" target="_blank" rel="noopener noreferrer">View GitHub profile ↗</a></div><p class="github-intro">Projects with latest activity more than four days ago, selected from my public repositories.</p><div class="github-grid"><a class="github-card" href="https://github.com/neeraj15022001/watchparty-app" target="_blank" rel="noopener noreferrer"><div class="repo-top"><span class="repo-mark">◉</span><span class="repo-language js-dot">JavaScript</span></div><h3>watchparty-app</h3><p>Watch together, with a focused frontend experience for shared playback.</p><div class="repo-meta"><span>Activity · 14 days ago</span><span>GitHub ↗</span></div></a><a class="github-card" href="https://github.com/neeraj15022001/DeskOrbit" target="_blank" rel="noopener noreferrer"><div class="repo-top"><span class="repo-mark">◉</span><span class="repo-language swift-dot">Swift</span></div><h3>DeskOrbit</h3><p>A macOS desktop experiment exploring fast, native interaction patterns.</p><div class="repo-meta"><span>Activity · 14 days ago</span><span>GitHub ↗</span></div></a><a class="github-card" href="https://github.com/neeraj15022001/create-api-launch" target="_blank" rel="noopener noreferrer"><div class="repo-top"><span class="repo-mark">◉</span><span class="repo-language ts-dot">TypeScript</span></div><h3>create-api-launch</h3><p>A developer tool for getting API projects from idea to launch.</p><div class="repo-meta"><span>Activity · 23 days ago</span><span>GitHub ↗</span></div></a></div>`;
-document.querySelector('#about').before(githubShowcase);
+const progressBar = document.querySelector('.scroll-progress span');
+if (progressBar) {
+  const updateScrollProgress = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = `${max > 0 ? (window.scrollY / max) * 100 : 0}%`;
+  };
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  window.addEventListener('resize', updateScrollProgress);
+  updateScrollProgress();
+}
